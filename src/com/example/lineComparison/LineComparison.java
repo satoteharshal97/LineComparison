@@ -35,11 +35,14 @@ public class LineComparison {
         Double x =  lenghtOfline1;
         Double y =  lenghtOfLine2;
 
-        Boolean bool = x.equals(y);
-        if(bool) {
-            System.out.println("Lines are equal");
-        }else {
-            System.out.println("Lines are distinct");
+        int retResult = x.compareTo(y);
+        if(retResult > 0) {
+            System.out.println("Line one is greater than Line two");
+        } else if(retResult< 0) {
+            System.out.println("Line one is less than Line two");
+        } else {
+            System.out.println("Line one is equal to Line two");
         }
+
     }
 }
